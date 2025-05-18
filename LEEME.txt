@@ -1,0 +1,19 @@
+Instrucciones para ejecutar el sistema de login:
+
+1. Crear una base de datos llamada 'sistema_login'.
+2. Ejecutar el siguiente SQL para crear la tabla de usuarios:
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+3. Insertar un usuario con contraseña encriptada:
+
+INSERT INTO usuarios (usuario, password) VALUES ('admin', 'REEMPLAZAR_CON_HASH');
+
+Para generar el hash de una contraseña, usar:
+<?php echo password_hash("tu_contraseña", PASSWORD_DEFAULT); ?>
+
+4. Ejecutar 'index.html' desde un servidor local (XAMPP).
